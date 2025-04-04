@@ -96,11 +96,16 @@ jobs:
         env:
           ARTIFACTS_DIR: ${{ matrix.image }}-logs/${{ matrix.image }}
         working-directory: ${{ github.workspace }}/src/github.com/${{ github.repository }}
+      - name: Sanitize image name
+        run: |
+          IMAGE="${{ matrix.image }}"
+          IMAGE_SANITIZED="${IMAGE//@*/}"
+          echo "SANITIZED_IMAGE=$IMAGE_SANITIZED" >> $GITHUB_ENV
       - name: Upload artifacts
         if: ${{ success() || failure() || cancelled() }}
         uses: actions/upload-artifact@v4
         with:
-          name: Single-logs-on-${{ replace(matrix.image, '@.*', '') }}
+          name: Single-logs-on-${{ env.SANITIZED_IMAGE }}
           path: ${{ github.workspace }}/src/github.com/${{ github.repository }}/tests_single/${{ matrix.image }}-logs
 
   ### SINGLE IPv6 CLUSTER
