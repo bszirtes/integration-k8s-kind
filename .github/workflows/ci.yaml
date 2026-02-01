@@ -59,7 +59,7 @@ jobs:
           - v1.23.17
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
+        uses: styfle/cancel-workflow-action@0.13.0
         with:
           access_token: ${{ github.token }}
       - uses: actions/setup-go@v5
@@ -115,7 +115,7 @@ jobs:
     needs: envsetup
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
+        uses: styfle/cancel-workflow-action@0.13.0
         with:
           access_token: ${{ github.token }}
       - uses: actions/setup-go@v5
@@ -164,7 +164,7 @@ jobs:
     needs: envsetup
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
+        uses: styfle/cancel-workflow-action@0.13.0
         with:
           access_token: ${{ github.token }}
       - uses: actions/setup-go@v5
@@ -208,7 +208,7 @@ jobs:
     needs: envsetup
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
+        uses: styfle/cancel-workflow-action@0.13.0
         with:
           access_token: ${{ github.token }}
       - name: Remove unnecessary files
@@ -284,7 +284,7 @@ jobs:
     needs: envsetup
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
+        uses: styfle/cancel-workflow-action@0.13.0
         with:
           access_token: ${{ github.token }}
       - uses: actions/setup-go@v5
@@ -328,7 +328,7 @@ jobs:
     needs: envsetup
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
+        uses: styfle/cancel-workflow-action@0.13.0
         with:
           access_token: ${{ github.token }}
       - name: Remove unnecessary files
@@ -383,7 +383,7 @@ jobs:
     needs: envsetup
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
+        uses: styfle/cancel-workflow-action@0.13.0
         with:
           access_token: ${{ github.token }}
       - uses: actions/setup-go@v5
@@ -426,7 +426,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.12.1
+        uses: styfle/cancel-workflow-action@0.13.0
         with:
           access_token: ${{ github.token }}
       - name: Remove unnecessary files
